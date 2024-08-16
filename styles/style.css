@@ -8,16 +8,116 @@ body{
 *{
     margin: 0px;
     padding: 0px;
-
+    box-sizing: border-box;
 }
 header{
-    height: 100vh;
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
     background-size: cover;
-    background-position: center;
-    min-height: 100px; 
 }
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+header .logo{
+    position: relative;
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+header.navigation a{
+    color: black;
+    background: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: background;
+}
+header .navigation a:not(:last-child){
+    margin-right: 30px;
+}
+header .navigation a:hover{
+    background-color: black;
+}
+.content{
+    max-width: 650px;
+    margin: 60px 100px;
+}
+.content .info h2{
+    color: black;
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+.content .info{
+    position: relative;
+    right: 100px;
+}
+.content .info h2 span{
+    color: #34A853;
+    font-size: 50px;
+    font-weight: 600;
+}
+.content .info p{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.content .info-btn{
+    color: white;
+    background-color: #34A853;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    transition-property: background;
+}
+.content .info-btn:hover{
+    background: black;
+}
+.media-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.media-icons a{
+    position: relative;
+    color: gray;
+    font-size: 25px;
+    transition: 0.3s;
+    transition-property: transform;
+}
+.media-icons a:not(:last-child){
+    margin-right: 60px;
+}
+.media-icons a:hover{
+    transform: scale(1.5);
+}
+
+
 #header1{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../components/images/fundo-corporativo-da-empresa-com-arquitetura-minima-ultra-realista-ia-generativa_807028-12.avif);
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -37,18 +137,18 @@ ul li{
 }
 ul li a{
     text-decoration: none;
-    color: #fff;
+    color: black;
     padding: 5px 20px;
     border: 1px solid transparent;
     transition: 0.5 ease;
 }
 ul li a:hover{
-    background-color: #fff;
-    color: black;
+    background-color: black;
+    color: white;
 }
 ul li.active a{
-    background-color: #fff;
-    color: black;
+    background-color: black;
+    color: white;
 }
 .logo img{
     float: left;
@@ -66,6 +166,11 @@ ul li.active a{
     transform: translate(-130%, -50%);
 
 }
+#magem{
+    height: 200px;
+    width: 500px;
+}
+
 .titlo h1{
     font-size: 70px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -78,23 +183,25 @@ ul li.active a{
     transform: translate(-50%, -50%);
 }
 .btn{
-    border: 1px solid white;
+    border: 1px solid black;
     padding: 5px 20px;
-    color: #fff;
+    color: black;
     transition: 0.5 ease;
     font-size: 18px;
     text-decoration: none;
+    border-radius: 3px;
 }
+
 .btn:hover{
     background-color: white;
     color: black;
 }
 #header2 {
-    height: 100vh;
+    height: 120vh;
     background-size: cover;
     background-position: center;
     min-height: 100px; 
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../components/images/un);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../components/images/Untitled\ design\ \(1\).jpg);
     padding: 6rem 2rem;
     
 }
@@ -121,7 +228,7 @@ ul li.active a{
 
 .explore_card {
     padding: 2rem;
-    background-color: #2c2c2e;
+    background-color: 	#363636;
     border: 2px solid transparent;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -130,7 +237,7 @@ ul li.active a{
 
 .explore_card:hover {
     background-color: #1c1c1e;
-    border-color: #444;
+    border-color: #34A853;
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
@@ -138,10 +245,10 @@ ul li.active a{
 .explore_card span {
     display: inline-block;
     padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1re;
     font-size: 1.5rem;
-    color: #ffffff;
-    background-color: white;
+    color: #34A853;
+    background-color:  #34A853;
     border-radius: 8px;
     transition: background-color 0.3s ease;
 }
@@ -209,18 +316,18 @@ ul li.active a{
 }
 .class_content p{
     margin-bottom: 4rem;
-    color: white;
+    color: black;
 }
 .class_content h2{
-    color: white;
+    color: black;
 }
 .class_content .btn{
-    background-color: black;
+    background-color: white;
     transition: all ease 0.2s;
 }
 .class_content .btn:hover{
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: black;
 }
 .statics{
     background-color: white;
